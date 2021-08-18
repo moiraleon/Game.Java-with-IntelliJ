@@ -21,7 +21,7 @@ public class Main {
 //            System.out.println("Try again!");
 
         Scanner userGuess = new Scanner( System.in );
-        int a = userGuess.nextInt();
+//        int a = userGuess.nextInt();
 //IF STATEMENT
 
 //        if (a< 35){
@@ -46,5 +46,18 @@ public class Main {
 //
 //        }
 
+
+        do{
+            int a = userGuess.nextInt();
+            if(a < 35) {
+                System.out.print("Try guessing a little higher");
+                continue;
+            } else if (a > 35) {
+                System.out.print("Try guessing a little lower");
+                continue;
+            } else if (a == 35)
+                System.out.print("Congratulations! You guessed the number!");
+            break;
+        } while(true);
     }
 }
